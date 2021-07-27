@@ -1,6 +1,6 @@
 import {StyleSheet, useColorScheme} from 'react-native';
 
-export const name = 'Genesis';
+export const name = 'Oxon';
 export const style_properties: {
   [key: string]: {};
 } = StyleSheet.create({
