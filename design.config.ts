@@ -48,8 +48,11 @@ export const style_properties: {
   flex_row: {
     flexDirection: 'row',
   },
+  wrap: {
+    flexWrap: 'wrap',
+  },
   w_normal: {
-    width: '83.33%',
+    width: '40%',
   },
   grow_1: {
     flexGrow: 1,
