@@ -1,7 +1,5 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {View} from 'react-native';
-import {style} from './design.config';
 import {Provider as Paper} from 'react-native-paper';
 import {Provider as Redux} from 'react-redux';
 import {createStore, combineReducers} from 'redux';

@@ -54,14 +54,20 @@ export const style_properties: {
   w_normal: {
     width: '40%',
   },
+  w_full: {
+    width: '100%',
+  },
+  padding_top: {
+    paddingTop: "5%",
+  },
   grow_1: {
     flexGrow: 1,
   },
   align_center: {
     alignItems: 'center',
   },
-  justify_between: {
-    justifyContent: 'space-between',
+  justify_around: {
+    justifyContent: 'space-around',
   },
   justify_center: {
     justifyContent: 'center',
