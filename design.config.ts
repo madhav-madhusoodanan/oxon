@@ -57,8 +57,8 @@ export const style_properties: {
   w_full: {
     width: '100%',
   },
-  padding_top: {
-    paddingTop: "5%",
+  margin_top: {
+    marginTop: "6.66%",
   },
   grow_1: {
     flexGrow: 1,
@@ -72,6 +72,19 @@ export const style_properties: {
   justify_center: {
     justifyContent: 'center',
   },
+  left_margin_even: {
+    marginLeft: "6.66%",
+  },
+  left_margin_odd: {
+    marginLeft: "3.33%",
+  },
+  right_margin_even: {
+    marginRight: "3.33%",
+  },
+  right_margin_odd: {
+    marginRight: "6.66%",
+  }
+
 });
 
 export const style = (styles: string) =>
