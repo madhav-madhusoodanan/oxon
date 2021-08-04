@@ -1,26 +1,37 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import Thunk from 'redux-thunk';
+import Item from '../../models/Item';
 
 const initialState = {
-  items: [
-    {id: '0', title: 'name0', pic: ''},
-    {id: '1', title: 'name1', pic: ''},
-    {id: '2', title: 'name2', pic: ''},
-    {id: '3', title: 'name3', pic: ''},
-    {id: '4', title: 'name4', pic: ''},
-    {id: '5', title: 'name5', pic: ''},
-    {id: '6', title: 'name6', pic: ''},
-    {id: '7', title: 'name7', pic: ''},
-    {id: '8', title: 'name8', pic: ''},
-    {id: '9', title: 'name9', pic: ''},
-    {id: '10', title: 'name10', pic: ''},
-    {id: '11', title: 'name11', pic: ''},
-    {id: '12', title: 'name12', pic: ''},
-    {id: '13', title: 'name13', pic: ''},
-    {id: '14', title: 'name14', pic: ''},
+  available_items: [
+    new Item(
+      '0',
+      'u1',
+      'Red Shirt',
+      'http://www.google.com/images/srpr/logo4w.png',
+      'obviously, a red shirt',
+      23.0,
+    ),
+    new Item(
+      '1',
+      'u2',
+      'Blue Shirt',
+      'http://www.google.com/images/srpr/logo4w.png',
+      'obviously, a blue shirt',
+      23.0,
+    ),
   ],
-  filteredItems: [],
-  favoriteItems: [],
+  user_items: [
+    new Item(
+      'p1',
+      'u1',
+      'Red Shirt',
+      'http://www.google.com/images/srpr/logo4w.png',
+      'obviously, a red shirt',
+      23.0,
+    ),
+  ],
+  favorite_items: [],
 };
 
 const itemsReducer = (state = initialState, action: any) => {
