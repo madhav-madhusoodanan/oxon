@@ -12,6 +12,8 @@ target 'Oxon' do
     :hermes_enabled => true 
   )
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'OxonTests' do
     inherit! :complete
     # Pods for testing

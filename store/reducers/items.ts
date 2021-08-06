@@ -1,7 +1,7 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import Thunk from 'redux-thunk';
 import Item from '../../models/Item';
-
+import cart from "./cart"
 const initialState = {
   available_items: [
     new Item(
@@ -9,7 +9,7 @@ const initialState = {
       'u1',
       'Red Shirt',
       'http://www.google.com/images/srpr/logo4w.png',
-      'obviously, a red shirt',
+      'obviously, a red shirt but in my opinion it is not something worht following',
       23.0,
     ),
     new Item(
@@ -34,12 +34,13 @@ const initialState = {
   favorite_items: [],
 };
 
-const itemsReducer = (state = initialState, action: any) => {
+const items = (state = initialState, action: any) => {
   return state;
 };
 
 const rootReducer = combineReducers({
-  items: itemsReducer,
+  items,
+  cart
 });
 
 const store = createStore(rootReducer, applyMiddleware(Thunk));

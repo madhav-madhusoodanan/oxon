@@ -36,8 +36,14 @@ export const style_properties: {
   text_medium: {
     fontSize: 36,
   },
+  text_center: {
+    textAlign: 'center',
+  },
   h_full: {
     height: '100%',
+  },
+  h_image: {
+    height: 400
   },
   h_total:{
     height: '90%',
@@ -48,11 +54,17 @@ export const style_properties: {
   flex_row: {
     flexDirection: 'row',
   },
+  flex_col: {
+    flexDirection: 'column',
+  },
   wrap: {
     flexWrap: 'wrap',
   },
-  w_normal: {
+  w_small: {
     width: '40%',
+  },
+  max_w_normal: {
+    maxWidth: 700,
   },
   w_full: {
     width: '100%',
@@ -83,8 +95,10 @@ export const style_properties: {
   },
   right_margin_odd: {
     marginRight: "6.66%",
-  }
-
+  },
+  overflow_hidden: {
+    overflow: 'hidden',
+  },
 });
 
 export const style = (styles: string) =>
