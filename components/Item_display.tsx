@@ -1,14 +1,18 @@
-import { StackNavigationProp } from '@react-navigation/stack';
+import {StackNavigationProp} from '@react-navigation/stack';
 import React from 'react';
 import {Button, Card} from 'react-native-paper';
 import {style} from '../design.config';
 import Item from '../models/Item';
-import { RootStackParamList } from '../RootStackParamList';
+import {RootStackParamList} from '../RootStackParamList';
 import {add_to_cart} from '../store/actions/cart';
+import {AppDispatch} from '../store/reducers/items';
 
 // this a 2nd order function
 const Item_display =
-  (navigation: StackNavigationProp<RootStackParamList, "Items">, dispatch) =>
+  (
+    navigation: StackNavigationProp<RootStackParamList, 'Items'>,
+    dispatch: AppDispatch,
+  ) =>
   ({item}: {item: Item}) =>
     (
       <Card

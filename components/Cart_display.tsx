@@ -5,10 +5,14 @@ import {style} from '../design.config';
 import Item from '../models/Item';
 import {RootStackParamList} from '../RootStackParamList';
 import {add_to_cart} from '../store/actions/cart';
+import {AppDispatch} from '../store/reducers/items';
 
 // this a 2nd order function
 const Cart_display =
-  (navigation: StackNavigationProp<RootStackParamList, 'Cart'>, dispatch) =>
+  (
+    navigation: StackNavigationProp<RootStackParamList, 'Cart'>,
+    dispatch: AppDispatch,
+  ) =>
   ({item}: {item: Item}) =>
     (
       <Card
