@@ -4,14 +4,10 @@ import {Provider as Paper} from 'react-native-paper';
 import {Provider as Redux} from 'react-redux';
 import store from './store/reducers/items';
 import {createStackNavigator} from '@react-navigation/stack';
-import Product from './screens/shop/Product';
+import Items from './screens/shop/Items';
 import Detail from './screens/shop/Detail';
-import Item from './models/Item';
-
-type RootStackParamList = {
-  Products: undefined;
-  Detail: {item: Item};
-};
+import { RootStackParamList } from './RootStackParamList';
+import Cart from './screens/shop/Cart';
 
 const Stack = createStackNavigator<RootStackParamList>();
 const App = () => {
@@ -21,8 +17,8 @@ const App = () => {
         <Paper>
           <Stack.Navigator>
             <Stack.Screen
-              name={'Products'}
-              component={Product}
+              name={'Items'}
+              component={Items}
               options={({route}) => ({
                 headerStyle: {backgroundColor: '#7e7ec9'},
                 headerTintColor: '#fff',
@@ -38,6 +34,10 @@ const App = () => {
                 headerTintColor: '#fff',
                 headerTitleStyle: {color: '#fff'},
               })}
+            />
+            <Stack.Screen 
+              name={"Cart"}
+              component={Cart}
             />
           </Stack.Navigator>
         </Paper>

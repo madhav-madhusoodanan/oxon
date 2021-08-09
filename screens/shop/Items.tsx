@@ -4,8 +4,10 @@ import Item from '../../models/Item';
 import {style} from '../../design.config';
 import {appSelector, appDispatch} from '../../store/hooks/hooks';
 import Item_base from '../../components/Item_display';
+import {RootStackParamList} from '../../RootStackParamList';
+import {StackScreenProps} from '@react-navigation/stack';
 
-const Product = ({navigation}) => {
+const Items = ({navigation}: StackScreenProps<RootStackParamList, 'Items'>) => {
   const items = appSelector(state => state.items.available_items);
   const dispatch = appDispatch();
   const Item_display = Item_base(navigation, dispatch);
@@ -16,4 +18,4 @@ const Product = ({navigation}) => {
     </View>
   );
 };
-export default Product;
+export default Items;
