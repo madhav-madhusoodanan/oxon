@@ -1,5 +1,6 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import Thunk from 'redux-thunk';
+import CartItem from '../../models/Cart_item';
 import Item from '../../models/Item';
 import cart from "./cart"
 const initialState = {
@@ -21,13 +22,11 @@ const initialState = {
       23.0,
     ),
   ],
-  user_items: [
-    new Item(
-      'p1',
-      'u1',
+  cart_items: [
+    new CartItem(
+      '0',
       'Red Shirt',
-      'http://www.google.com/images/srpr/logo4w.png',
-      'obviously, a red shirt',
+      2,
       23.0,
     ),
   ],

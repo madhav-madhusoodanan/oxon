@@ -1,10 +1,10 @@
-class CartItem {
+export default class CartItem {
   id: string;
   title: string;
   quantity: number;
   price: number;
 
-  constructor(id, title, quantity, price) {
+  constructor(id: string, title: string, quantity: number, price: number) {
     this.id = id;
     this.title = title;
     this.quantity = quantity;

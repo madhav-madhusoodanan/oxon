@@ -17,9 +17,9 @@ const Items = ({navigation}: StackScreenProps<RootStackParamList, 'Items'>) => {
     <View style={style('flex_row justify_around h_full')}>
       <FlatList<Item> data={items} renderItem={Item_display} numColumns={2} />
       <FAB
-        
         icon="cart"
-        style={{position: 'absolute', margin: 16, right: 0, bottom: 0}}
+        style={style("absolute margin_normal right bottom")}
+        onPress={() => navigation.navigate('Cart')}
       />
     </View>
   );

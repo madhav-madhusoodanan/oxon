@@ -51,6 +51,15 @@ export const style_properties: {
   h_mid: {
     height: 90,
   },
+  absolute: {
+    position: 'absolute',
+  },
+  bottom: {
+    bottom: 0
+  },
+  right: {
+    right: 0
+  },
   flex_row: {
     flexDirection: 'row',
   },
@@ -65,6 +74,9 @@ export const style_properties: {
   },
   max_w_normal: {
     maxWidth: 700,
+  },
+  margin_normal: {
+    margin: 16,
   },
   w_full: {
     width: '100%',
