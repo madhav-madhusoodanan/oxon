@@ -38,6 +38,11 @@ const App = () => {
             <Stack.Screen 
               name={"Cart"}
               component={Cart}
+              options={({route}) => ({
+                headerStyle: {backgroundColor: '#7e7ec9'},
+                headerTintColor: '#fff',
+                headerTitleStyle: {color: '#fff'},
+              })}
             />
           </Stack.Navigator>
         </Paper>

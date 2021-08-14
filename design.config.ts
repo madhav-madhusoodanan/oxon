@@ -18,6 +18,21 @@ export const style_properties: {
   bg_black: {
     backgroundColor: 'black',
   },
+  bg_gray: {
+    backgroundColor: '#121212',
+  },
+  border: {
+    borderWidth: 2
+  },
+  border_gray: {
+    borderColor: '#121212',
+  },
+  rounded: {
+    borderRadius: 5
+  },
+  elevation: {
+    elevation: 2
+  },
   text_black: {
     color: '#000000',
   },
@@ -111,6 +126,9 @@ export const style_properties: {
   overflow_hidden: {
     overflow: 'hidden',
   },
+  padding_normal: {
+
+  }
 });
 
 export const style = (styles: string) =>

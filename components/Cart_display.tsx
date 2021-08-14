@@ -1,5 +1,4 @@
 import React from 'react';
-import {View, Text} from 'react-native';
 import {List, Colors} from 'react-native-paper';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {style} from '../design.config';
@@ -16,15 +15,12 @@ const Cart_display =
   ({item}: {item: CartItem}) =>
     (
       <List.Item
-        title={item.title}
-        left={() => <Text>{item.quantity}</Text>}
-        right={() => (
-          <View>
-            <Text>{item.quantity * item.price}</Text>
-            <View>
-              <List.Icon color={Colors.red500} icon="trash-can-outline" />
-            </View>
-          </View>
+        style={style('margin_normal border border_gray rounded')}
+        titleStyle={style('text_small')}
+        title={`${item.quantity} ${item.title} = ${item.price * item.quantity}`}
+        left={(props) => <List.Icon {...props} color={Colors.green500} icon="cart" />}
+        right={(props) => (
+          <List.Icon {...props} color={Colors.red500} icon="trash-can-outline" />
         )}
       />
     );

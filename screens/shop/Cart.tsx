@@ -14,9 +14,15 @@ const Cart = ({navigation}: StackScreenProps<RootStackParamList, 'Cart'>) => {
   const Cart_display = Cart_display_base(navigation, dispatch);
 
   return (
-    <View style={style('flex_row justify_around')}>
-      <FlatList<CartItem> data={items} renderItem={Cart_display} numColumns={2} />
-      <Snackbar visible={true} action={{label: 'Order', onPress: () => {}}} >
+    <View style={style('flex_row justify_around h_full')}>
+      <FlatList<CartItem>
+        data={items}
+        renderItem={Cart_display}
+      />
+      <Snackbar
+        visible={true}
+        action={{label: 'Order', onPress: () => {}}}
+        onDismiss={() => {}}>
         {`Total: Rs. ${items
           .map(item => item.quantity * item.price)
           .reduce((total: number, current) => total + current)}`}
